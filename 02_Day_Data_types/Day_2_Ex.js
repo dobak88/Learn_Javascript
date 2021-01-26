@@ -121,12 +121,14 @@ const sentence = '%I \$am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re \
 const newSentence = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 let tempString = newSentence.match(/\d+/g)
 console.log(tempString)
+console.log(typeof(tempString))
 
+let x = parseInt(tempString[0])
+let y = parseInt(tempString[1])
+let z = parseInt(tempString[2])
 
-let x = parseInt(tempString.substr(0, 4))
-let y = parseInt(tempString.substr(4, 5))
-let z = parseInt(tempString.substr(9, 5))
+console.log(x, " ", y, " ", z)
 
 let salary = (x * 12) + y + (z * 12)
-console.log("Annual salary = $", salary)
+console.log('Annual salary = $', salary)
 
